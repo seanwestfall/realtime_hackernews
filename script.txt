@@ -1,0 +1,395 @@
+Script started on Sun Dec 28 21:01:46 2014
+bash-3.2$ o[Kgo run server.go
+# command-line-arguments
+./server.go:139: culTotal declared and not used
+bash-3.2$ go run server.go
+1 of 100: 8808453
+counting comments of 8808453
+2 of 100: 8807318
+counting comments of 8807318
+3 of 100: 8808490
+counting comments of 8808490
+4 of 100: 8808292
+counting comments of 8808292
+5 of 100: 8807040
+counting comments of 8807040
+6 of 100: 8808152
+counting comments of 8808152
+7 of 100: 8806835
+counting comments of 8806835
+8 of 100: 8807651
+counting comments of 8807651
+9 of 100: 8808367
+counting comments of 8808367
+10 of 100: 8806910
+counting comments of 8806910
+11 of 100: 8807309
+counting comments of 8807309
+12 of 100: 8808228
+counting comments of 8808228
+13 of 100: 8807212
+counting comments of 8807212
+14 of 100: 8807099
+counting comments of 8807099
+15 of 100: 8805053
+counting comments of 8805053
+16 of 100: 8806143
+counting comments of 8806143
+17 of 100: 8808076
+counting comments of 8808076
+18 of 100: 8806146
+counting comments of 8806146
+19 of 100: 8806381
+counting comments of 8806381
+20 of 100: 8807290
+counting comments of 8807290
+Time: 3m30.475625471s[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:61307
+[martini] Completed 200 OK in 40.615554ms
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8808907
+counting comments of 8808907
+2 of 100: 8808490
+counting comments of 8808490
+3 of 100: 8807318
+counting comments of 8807318
+4 of 100: 8808755
+counting comments of 8808755
+5 of 100: 8808152
+counting comments of 8808152
+6 of 100: 8807040
+counting comments of 8807040
+7 of 100: 8808453
+counting comments of 8808453
+8 of 100: 8806835
+counting comments of 8806835
+9 of 100: 8806910
+counting comments of 8806910
+10 of 100: 8807651
+counting comments of 8807651
+11 of 100: 8808292
+counting comments of 8808292
+12 of 100: 8808367
+counting comments of 8808367
+13 of 100: 8807309
+counting comments of 8807309
+14 of 100: 8805053
+counting comments of 8805053
+15 of 100: 8807212
+counting comments of 8807212
+16 of 100: 8807099
+counting comments of 8807099
+17 of 100: 8807290
+counting comments of 8807290
+18 of 100: 8806143
+counting comments of 8806143
+19 of 100: 8806146
+counting comments of 8806146
+20 of 100: 8808780
+counting comments of 8808780
+Time: 4m13.18474869s[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:62213
+[martini] Completed 200 OK in 57.683529ms
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8808490
+counting comments of 8808490
+2 of 100: 8807318
+counting comments of 8807318
+3 of 100: 8808755
+counting comments of 8808755
+4 of 100: 8808152
+counting comments of 8808152
+5 of 100: 8808907
+counting comments of 8808907
+6 of 100: 8807040
+counting comments of 8807040
+7 of 100: 8806835
+counting comments of 8806835
+8 of 100: 8808453
+counting comments of 8808453
+9 of 100: 8806910
+counting comments of 8806910
+10 of 100: 8808367
+counting comments of 8808367
+11 of 100: 8807651
+counting comments of 8807651
+12 of 100: 8808292
+counting comments of 8808292
+13 of 100: 8807309
+counting comments of 8807309
+14 of 100: 8805053
+counting comments of 8805053
+15 of 100: 8807212
+counting comments of 8807212
+16 of 100: 8807099
+counting comments of 8807099
+17 of 100: 8806143
+counting comments of 8806143
+18 of 100: 8807290
+counting comments of 8807290
+19 of 100: 8806146
+counting comments of 8806146
+20 of 100: 8808076
+counting comments of 8808076
+Time: 5m52.821194405s
+[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:63259
+[martini] Completed 200 OK in 38.507817ms
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8808490
+counting comments of 8808490
+panic: Get https://hacker-news.firebaseio.com/v0/item/8808944.json: EOF
+
+goroutine 16 [running]:
+runtime.panic(0x2a4ca0, 0xc2081f8330)
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/panic.c:279 +0xf5
+main.perror(0x56d308, 0xc2081f8330)
+	/Users/Sean/misc/golang/martini/server.go:15 +0x4f
+main.getCommentData(0x8669f0, 0x0)
+	/Users/Sean/misc/golang/martini/server.go:117 +0x14e
+main.countCommentsInner(0xc2081fd650, 0x1, 0x4, 0x1)
+	/Users/Sean/misc/golang/martini/server.go:153 +0xbf
+main.countCommentsInner(0xc2082fe380, 0x19, 0x1c, 0x1d)
+	/Users/Sean/misc/golang/martini/server.go:155 +0x101
+main.countComments(0x86682a, 0x1)
+	/Users/Sean/misc/golang/martini/server.go:140 +0x1fb
+main.get_hackernews_topstories(0x0, 0x0)
+	/Users/Sean/misc/golang/martini/server.go:85 +0x8af
+main.main()
+	/Users/Sean/misc/golang/martini/server.go:162 +0x3d
+
+goroutine 19 [finalizer wait]:
+runtime.park(0x15f30, 0x4ae5d0, 0x4ad089)
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/proc.c:1369 +0x89
+runtime.parkunlock(0x4ae5d0, 0x4ad089)
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/proc.c:1385 +0x3b
+runfinq()
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/mgc0.c:2644 +0xcf
+runtime.goexit()
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/proc.c:1445
+
+goroutine 17 [syscall]:
+runtime.goexit()
+	/usr/local/Cellar/go/1.3.3/libexec/src/pkg/runtime/proc.c:1445
+exit status 2
+bash-3.2$ go run server.go
+1 of 100: 8808490
+counting comments of 8808490
+2 of 100: 8807318
+counting comments of 8807318
+3 of 100: 8808755
+counting comments of 8808755
+4 of 100: 8808907
+counting comments of 8808907
+5 of 100: 8808152
+counting comments of 8808152
+6 of 100: 8807040
+counting comments of 8807040
+7 of 100: 8806835
+counting comments of 8806835
+8 of 100: 8808453
+counting comments of 8808453
+9 of 100: 8806910
+counting comments of 8806910
+10 of 100: 8807651
+counting comments of 8807651
+11 of 100: 8808367
+counting comments of 8808367
+12 of 100: 8808292
+counting comments of 8808292
+13 of 100: 8807309
+counting comments of 8807309
+14 of 100: 8808425
+counting comments of 8808425
+15 of 100: 8805053
+counting comments of 8805053
+16 of 100: 8807212
+counting comments of 8807212
+17 of 100: 8808535
+counting comments of 8808535
+18 of 100: 8807099
+counting comments of 8807099
+19 of 100: 8808427
+counting comments of 8808427
+20 of 100: 8807290
+counting comments of 8807290
+Time: 3m57.307040017s
+[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:64156
+[martini] Completed 200 OK in 36.891666ms
+[martini] Started GET /build/react.js for [::1]:64156
+[martini] Completed 404 Not Found in 587.154us
+[martini] Started GET /build/JSXTransformer.js for [::1]:64156
+[martini] Completed 404 Not Found in 87.959us
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8808490
+counting comments of 8808490
+2 of 100: 8807318
+counting comments of 8807318
+3 of 100: 8808755
+counting comments of 8808755
+4 of 100: 8808907
+counting comments of 8808907
+5 of 100: 8808152
+counting comments of 8808152
+6 of 100: 8807040
+counting comments of 8807040
+7 of 100: 8806835
+counting comments of 8806835
+8 of 100: 8806910
+counting comments of 8806910
+9 of 100: 8808453
+counting comments of 8808453
+10 of 100: 8808367
+counting comments of 8808367
+11 of 100: 8807651
+counting comments of 8807651
+12 of 100: 8808292
+counting comments of 8808292
+13 of 100: 8808535
+counting comments of 8808535
+14 of 100: 8807309
+counting comments of 8807309
+15 of 100: 8805053
+counting comments of 8805053
+16 of 100: 8808675
+counting comments of 8808675
+17 of 100: 8807212
+counting comments of 8807212
+18 of 100: 8808427
+counting comments of 8808427
+19 of 100: 8807099
+counting comments of 8807099
+20 of 100: 8807290
+counting comments of 8807290
+Time: 4m2.925933749s
+[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:65005
+[martini] Completed 200 OK in 48.085351ms
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:65005
+[martini] Completed 404 Not Found in 17.105929ms
+[martini] Started GET /build/JSXTransformer-0.12.2.js for [::1]:65006
+[martini] Completed 404 Not Found in 160.284us
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:65006
+[martini] Completed 404 Not Found in 85.346us
+[martini] Started GET / for [::1]:65006
+[martini] Completed 200 OK in 172.861us
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:65006
+[martini] Completed 404 Not Found in 87.644us
+[martini] Started GET /build/JSXTransformer-0.12.2.js for [::1]:65005
+[martini] Completed 404 Not Found in 141.529us
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8810058
+counting comments of 8810058
+2 of 100: 8809551
+counting comments of 8809551
+3 of 100: 8810131
+counting comments of 8810131
+4 of 100: 8810157
+counting comments of 8810157
+5 of 100: 8809215
+counting comments of 8809215
+6 of 100: 8809138
+counting comments of 8809138
+7 of 100: 8809406
+counting comments of 8809406
+8 of 100: 8808754
+counting comments of 8808754
+9 of 100: 8809422
+counting comments of 8809422
+10 of 100: 8809626
+counting comments of 8809626
+11 of 100: 8809438
+counting comments of 8809438
+12 of 100: 8808846
+counting comments of 8808846
+13 of 100: 8809477
+counting comments of 8809477
+14 of 100: 8808535
+counting comments of 8808535
+15 of 100: 8807318
+counting comments of 8807318
+16 of 100: 8810235
+counting comments of 8810235
+17 of 100: 8810075
+counting comments of 8810075
+18 of 100: 8809049
+counting comments of 8809049
+19 of 100: 8808615
+counting comments of 8808615
+20 of 100: 8808929
+counting comments of 8808929
+Time: 3m19.55891645s
+[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:49569
+[martini] Completed 200 OK in 238.023us
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:49569
+[martini] Completed 404 Not Found in 102.437us
+[martini] Started GET /build/JSXTransformer-0.12.2.js for [::1]:49570
+[martini] Completed 404 Not Found in 108.115us
+[martini] Started GET / for [::1]:49643
+[martini] Completed 200 OK in 254.378us
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:49643
+[martini] Completed 404 Not Found in 91.63us
+[martini] Started GET /build/JSXTransformer-0.12.2.js for [::1]:49644
+[martini] Completed 404 Not Found in 139.837us
+^Cexit status 2
+bash-3.2$ go run server.go
+1 of 100: 8810058
+counting comments of 8810058
+2 of 100: 8810366
+counting comments of 8810366
+3 of 100: 8810131
+counting comments of 8810131
+4 of 100: 8810157
+counting comments of 8810157
+5 of 100: 8809551
+counting comments of 8809551
+6 of 100: 8810235
+counting comments of 8810235
+7 of 100: 8809215
+counting comments of 8809215
+8 of 100: 8809138
+counting comments of 8809138
+9 of 100: 8809406
+counting comments of 8809406
+10 of 100: 8809422
+counting comments of 8809422
+11 of 100: 8808754
+counting comments of 8808754
+12 of 100: 8809626
+counting comments of 8809626
+13 of 100: 8810414
+counting comments of 8810414
+14 of 100: 8809438
+counting comments of 8809438
+15 of 100: 8808846
+counting comments of 8808846
+16 of 100: 8808535
+counting comments of 8808535
+17 of 100: 8810075
+counting comments of 8810075
+18 of 100: 8807318
+counting comments of 8807318
+19 of 100: 8809477
+counting comments of 8809477
+20 of 100: 8810402
+counting comments of 8810402
+Time: 3m38.410872731s
+[martini] listening on :3000 (development)
+[martini] Started GET / for [::1]:50308
+[martini] Completed 200 OK in 222.673us
+[martini] Started GET /build/react-0.12.2.min.js for [::1]:50308
+[martini] Completed 404 Not Found in 106.493us
+[martini] Started GET /build/JSXTransformer-0.12.2.js for [::1]:50308
+[martini] Completed 404 Not Found in 81.335us
+^Cexit status 2
+bash-3.2$ exit
+exit
+
+Script done on Mon Dec 29 08:56:23 2014
